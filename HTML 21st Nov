@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+      <!-- jQuery from I'm using google below  
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script> -->
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- jQuery Google CDN: -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>  
+
+    <!-- Include jQuery Form Validation Plugin -->
+  <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+
+     <!-- Google Font Inter - Headings -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
+
+ <!-- Google Font Roboto - body text -->
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Montagu+Slab:opsz,wght@16..144,700&family=Montserrat:ital,wght@0,400;0,700;1,700&family=Open+Sans&family=Roboto:wght@300&display=swap" rel="stylesheet">
+ 
+<!-- Third Party Plugins TEST-->
+
+<!-- CSS style sheet linked-->
+    <link rel="stylesheet" href="style.css">
+
+    <title>Accomodation Web App for Tourism NZ</title>
+  </head>
+  <body>
+
+ <!-- Container for 1st Form, Destination, Date, Guests -->
+    <div class="container" >
+        <img src="images/cutout-pure-new-zealand-logo .png" class="rounded mx-auto d-block" alt="100% Pure NZ Logo">
+        <form id="accommodationForm" class="w-60 mx auto py-5 shadow p-4">
+            <h3>Hare Mai, we look forward to welcoming you.</h3> <hr>
+            <h6>Select your short stay accomodation option below</h6>
+            <div class="row">
+            <div class="col">
+                <select class="custom-select" name="destination">
+                    <option selected>Destination</option>
+                    <option value="1">Auckland</option>
+                    <option value="2">Christchurch</option>
+                    <option value="3">Wellington</option>
+                  </select>
+            </div>
+              <div class="col">
+               <!-- Input field for date range -->
+              <input type="text" name="dateRange" class="form-control" placeholder="Dates" />
+              </div>
+           <!--   <input type="text" name="form-control" value="dd/mm/yy" /> -->
+              <div class="col">
+                <select class="custom-select">
+                  <option selected name="guests">Guests</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="3">4</option>
+                </select>
+            </div>
+<!-- Button Div-->
+<div class="mb-3 d-flex">
+    <button type="submit" class="btn btn-primary">Haere tatou!</button>
+</div>
+          </form>
+    </div>
+
+    <!-- Optional JavaScript BOOTSTRAP -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+       <!-- Date Range Picker To get started, include jQuery, Moment.js and Date Range Picker's files in your webpage https://www.daterangepicker.com/  A JavaScript component for choosing date ranges, dates and times. -->
+       <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+       <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+       <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+
+<script src="/script.js"></script>
+  </body>
+</html>
