@@ -1,0 +1,118 @@
+//EXAMPLE OF HOW TO WRITE Jqery from YOOBEE
+//$(document).ready(function() {
+  // jQuery methods go here...
+//});
+
+// Your accommodation code here
+
+
+
+  //jQuery Form Validation Below V1//
+  // Initialise the date range picker
+  //$(document).ready(function() {
+    //const dateRangePicker = $('input[name="dateRange"]').daterangepicker({
+      //opens: 'center',
+      //locale: {
+        //format: 'DD-MM-YYYY',
+      //},
+    //});
+    // Clear the input field after initialisation
+    //dateRangePicker.val('');
+  //});
+
+ // $(document).ready(function() {
+    // Add validation rules for your form
+   // $("#accommodationForm").validate({
+     // rules: {
+        // Add rules for each form field
+        // Example: "fieldName": "required"
+       // "destination": "required",
+        //"dateRange": "required",
+        //"guests": "required",
+        // Add more rules as needed
+      //},
+      //messages: {
+        // Add custom error messages if needed
+        //"destination": "Please select a destination",
+        //"dateRange": "Please select a date range",
+        //"Guests": "Please select number of guests",
+        // Add more messages as needed
+      //},
+      //submitHandler: function(form) {
+        // If the form is valid, you can handle the form submission here
+        //alert("Form submitted successfully!");
+        // Uncomment the next line to actually submit the form
+       //form.submit();
+      //}
+    //});
+  //});
+
+
+ //jQuery Form Validation Below V2//
+  $(document).ready(function() {
+    // Initialise date range picker
+    $('#accommodationForm input[name="dateRange"]').daterangepicker({
+      opens: 'center',
+      locale: {
+        format: 'DD-MM-YYYY',
+      },
+      placeholder: 'Select dates',
+    }).on('apply.daterangepicker', function(ev, picker) {
+      // Calculate the number of nights
+      const startDate = picker.startDate;
+      const endDate = picker.endDate;
+      const numberOfNights = endDate.diff(startDate, 'days');
+
+      // You can use the numberOfNights in your JavaScript functions
+      console.log('Number of nights:', numberOfNights);
+    });
+
+    //remember to use Document ready!
+    $(document).ready(function() {
+      // Initialise validation
+      $("#accommodationForm").validate({
+        rules: {
+          "destination": "required",
+          "dateRange": "required",
+          "guests": "required",
+        },
+        messages: {
+          "destination": "Please select a destination",
+          "dateRange": "Please select a date range",
+          "guests": "Please select number of guests",
+        },
+        submitHandler: function(form) {
+          alert("Form submitted successfully!");
+          // Uncomment the next line to actually submit the form
+         // form.submit();
+        }
+      });
+    });
+
+    
+
+// Define an object to represent the accommodation with some initial availability
+
+//const accommodation = {
+  //totalRooms: 10,
+  //bookedRooms: 3,
+//};
+// Function to check accommodation availability
+
+//function checkAvailability(requestedRooms) {
+  //const availableRooms = accommodation.totalRooms - accommodation.bookedRooms;
+  
+ // if (requestedRooms <= availableRooms) {
+  //  return `Accommodation is available. ${requestedRooms} rooms can be booked.`;
+  //} else {
+    //return `Sorry, accommodation is fully booked. Only ${availableRooms} rooms available.`;
+    
+  //}
+//}
+
+
+// Example usage
+
+//const requestedRooms = 5;
+//const availabilityMessage = checkAvailability(requestedRooms);
+//console.log(availabilityMessage);
